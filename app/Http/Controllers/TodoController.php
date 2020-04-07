@@ -55,7 +55,7 @@ class TodoController extends Controller
         //$inputの中にある配列の中にuse_idキーを追加して現在ログイン中のidを取得したものをバリューに定義している
         $this->todo->fill($input)->save();
         // $this->todo->fill($input)->save();
-        return redirect()->to('todo');
+        return redirect()->route('todo.index');
     }
 
     /**
@@ -98,7 +98,7 @@ class TodoController extends Controller
         // dd($request);
         $input = $request->all();
         $this->todo->find($id)->fill($input)->save();
-        return redirect()->to('todo');
+        return redirect()->route('todo.index');
         // dd($input);
         // $findrecord = $this->todo->find($id);
         // echo('<pre>');
@@ -120,6 +120,6 @@ class TodoController extends Controller
     public function destroy($id)
     {
         $this->todo->find($id)->delete();
-        return redirect()->to('todo');
+        return redirect()->route('todo.index');
     }
 }
