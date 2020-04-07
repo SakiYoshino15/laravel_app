@@ -15,12 +15,12 @@ class TodosTableSeeder extends Seeder
         DB::table('todos')->truncate();
         DB::table('todos')->insert([
             [
-                'title'      => 'Laravel Lessonを終わらせる',
+                'title'      => 'Gitテスト',
                 'created_at' => Carbon::create(2018, 1, 1),
                 'updated_at' => Carbon::create(2018, 1, 4),
             ],
             [
-                'title'      => 'レビューに向けて理解を深める',
+                'title'      => 'Gitの作業フローに慣れる',
                 'created_at' => Carbon::create(2018, 2, 1),
                 'updated_at' => Carbon::create(2018, 2, 5),
             ],
