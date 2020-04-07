@@ -24,6 +24,16 @@ class TodosTableSeeder extends Seeder
                 'created_at' => Carbon::create(2018, 2, 1),
                 'updated_at' => Carbon::create(2018, 2, 5),
             ],
+            [
+                'title'      => 'Gitの作業フローに慣れる',
+                'created_at' => Carbon::create(2018, 2, 1),
+                'updated_at' => Carbon::create(2018, 2, 5),
+            ],
+            [
+                'title'      => 'Gitの作業フローに慣れる',
+                'created_at' => Carbon::create(2018, 2, 1),
+                'updated_at' => Carbon::create(2018, 2, 5),
+            ],
         ]);
     }
 }
