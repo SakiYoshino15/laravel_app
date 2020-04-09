@@ -24,9 +24,10 @@ class TodoController extends Controller
     {
         // $todos = $this->todo->all();
         $todos = $this->todo->getByUserId(Auth::id());
+        $users = Auth::user();
         //ログインしているユーザーのIDとDBにあるテーブルのUser_idが一致するものだけcolecitonに格納して返している。
         // getByUserIdはmodelの中でメソッドを指定している
-        return view('todo.index', compact('todos'));
+        return view('todo.index', compact('todos','users'));
     }
 
     /**
