@@ -13,7 +13,9 @@ class LessonController extends Controller
      */
     public function index()
     {
-       return 'gizomo';
+    //    return 'gizomo';
+        return view('todo.lv2');
+
     }
 
     /**
@@ -21,9 +23,10 @@ class LessonController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
+        return $request->all();
     }
 
     /**
