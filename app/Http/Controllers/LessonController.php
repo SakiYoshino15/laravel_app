@@ -3,9 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\prefecture;
 
 class LessonController extends Controller
 {
+
+    private $prefecture;
+
+    public function __construct(prefecture $instanceClass)
+    {
+        $this->prefecture = $instanceClass;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +23,10 @@ class LessonController extends Controller
     public function index()
     {
     //    return 'gizomo';
-        return view('todo.lv2');
+        // return view('lesson.lv2');
+        $prefectures = $this->prefecture->all();
+
+        return view('lesson.lv4', compact('prefectures'));
 
     }
 

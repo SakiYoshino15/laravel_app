@@ -17,7 +17,8 @@ Route::get('/', function () {
 });
 // Route::resource('todo', 'TodoController');
 // Route::resource('/gizumo_lv1', 'LessonController');
-Route::resource('/gizumo_lv2', 'LessonController');
+// Route::resource('/gizumo_lv2', 'LessonController');
+Route::resource('/gizumo_lv4', 'LessonController');
 
 
 Auth::routes();
